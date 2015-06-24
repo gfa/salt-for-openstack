@@ -30,10 +30,12 @@ I'm in the process to move those files to salt modules which will do the same. I
 
 NOTES
 ---
- - for simplicity only *base* environment is configured.
 
-- if you are looking for formulas, like Puppet modules for OpenStack, you won't find them here.
+- For simplicity only *base* environment is configured.
+
+- If you are looking for formulas, like Puppet modules for OpenStack, you won't find them here.
 I don't like complex formulas and I don't use them as I found them hard to explain or follow.
 I use simple state files where pkgs are installed, config files are generated and services are enabled/started/restarted/reload
 
-
+- There are keys in the repo, i plan to move them to pillar then to a private location, but as I don't use this directly on production it may take a while.
+- Same with pillar values, I don't consider them private.
