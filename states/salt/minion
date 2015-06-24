@@ -1,0 +1,9 @@
+master: salt
+failhard: True
+state_output: mixed
+state_verbose: False
+log_level: info
+enable_gpu_grains: False
+backup_mode: minion
+random_reauth_delay: 180
+#startup_states: 'highstate'

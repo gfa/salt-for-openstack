@@ -1,0 +1,2 @@
+deb [arch=amd64] {{pillar['approxrepo']}}/ubuntu-cloud-archive {{ distrib }}-updates/{{ openstack_release }} main
+deb [arch=amd64] {{pillar['approxrepo']}}/ubuntu-cloud-archive {{ distrib }}-proposed/{{ openstack_release }} main

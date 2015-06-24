@@ -1,0 +1,2 @@
+deb {{pillar['approxrepo']}}/{{ openstack_release }}-{{ distrib }} {{ distrib }}-{{ openstack_release }}-backports-nochange main
+deb {{pillar['approxrepo']}}/{{ openstack_release }}-{{ distrib }} {{ distrib }}-{{ openstack_release }}-backports main

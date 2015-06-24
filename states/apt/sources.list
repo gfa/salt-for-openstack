@@ -1,0 +1,12 @@
+{% if grains['os'] == 'Debian' %}
+  {% set os = 'debian' %}
+deb {{pillar['approxrepo']}}/{{ id }}-security {{ distrib }}/updates {{ repos }}
+{% elif grains['os'] == 'Ubuntu' %}
+  {% set os = 'ubuntu' %}
+deb {{pillar['approxrepo']}}/{{ id }}-security {{ distrib }}-updates {{ repos }}
+deb {{pillar['approxrepo']}}/{{ id }} {{ distrib }}-security {{ repos }}
+{% endif %}
+
+deb {{pillar['approxrepo']}}/{{ id }}/ {{ distrib }} {{ repos }}
+deb {{pillar['approxrepo']}}/{{ id }}/ {{ distrib }}-backports {{ repos }}
+deb {{pillar['approxrepo']}}/{{ id }}/ {{ distrib }}-updates {{ repos }}

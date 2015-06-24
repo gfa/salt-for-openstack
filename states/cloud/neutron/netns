@@ -1,0 +1,25 @@
+#!/bin/bash
+# gustavo panizzo <gfa@zumbi.com.ar>
+# 2014-05-22
+# this file is out in public domain
+
+set -e
+set -o pipefail
+if [ -z ${1} ]; then
+	echo "	you need to specify which network or router namespace do you want to get into"
+	echo ""
+	exit 1
+fi
+UUID=`neutron net-show $1 2>/dev/null |grep  '| id' |awk '{print $4}'` || UUID=`neutron router-show $1 |grep  '| id' |awk '{print $4}'` || exit 2
+OLDPS1=${PS1}
+if [ -e /var/run/netns/qdhcp-$UUID ]; then
+	export NETNS=${1}
+	ip netns exec qdhcp-$UUID bash -i
+	else
+	if [ -e /var/run/netns/qrouter-$UUID ]; then
+	export NETNS=${1}
+	ip netns exec qrouter-$UUID bash -i
+	fi
+
+fi
+export PS1=${OLDPS1}

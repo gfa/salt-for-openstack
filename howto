@@ -1,0 +1,5 @@
+salt-call -l debug state.sls backup
+salt-call -l debug state.highstate
+
+puppet agent --server puppet --no-daemonize -v
+

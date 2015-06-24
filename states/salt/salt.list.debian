@@ -1,0 +1,3 @@
+#deb http://debian.saltstack.com/debian {{distrib}}-saltstack main
+#deb http://192.168.255.1:9999/salt {{distrib}}-saltstack main
+deb http://192.168.255.1:9999/salt {{distrib}}-saltstack-2014-07 main

@@ -1,0 +1,5 @@
+# stable
+deb http://ppa.launchpad.net/ubuntu-lxc/stable/ubuntu {{ distrib }} main
+
+# latest
+deb http://ppa.launchpad.net/ubuntu-lxc/lxc-git-master/ubuntu {{ distrib }} main

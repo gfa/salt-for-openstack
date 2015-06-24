@@ -1,0 +1,4 @@
+deb {{pillar['approxrepo']}}/ubuntu/ {{ distrib }} main universe
+deb {{pillar['approxrepo']}}/ubuntu  {{ distrib }}-security main universe
+deb {{pillar['approxrepo']}}/ubuntu/ {{ distrib }}-backports main universe
+deb {{pillar['approxrepo']}}/ubuntu/ {{ distrib }}-updates main universe

@@ -1,0 +1,150 @@
+# -*- mode: conf -*-
+# regionOne
+[DEFAULT]
+verbose=True
+debug=True
+
+log_dir=/var/log/nova
+state_path=/var/lib/nova
+lock_path=/var/lock/nova
+connection_type=libvirt
+root_helper=sudo nova-rootwrap /etc/nova/rootwrap.conf
+api_paste_config=/etc/nova/api-paste.ini
+volumes_path=/var/lib/nova/volumes
+enabled_apis=osapi_compute,metadata
+
+my_ip={{my_ip}}
+
+host={{hostname}}
+
+vnc_enabled=True
+novncproxy_base_url = {{novncproxy_base_url}}
+vncserver_listen=127.0.0.1
+vncserver_proxyclient_address = {{vncserver_proxyclient_address}}
+# these vnc parameters are not supported by havana and icehouse. do not bother.
+# vnc_port=57000
+# vnc_port_total=200
+# vnc_password=LeL5xat9hQbi5roMnYyMzuhsWMtTzTZh
+dhcp_domain = {{dhcp_domain}}
+
+#notification_driver=nova.openstack.common.notifier.rpc_notifier
+#notification_topics=notifications,monitor
+#notify_on_state_change=vm_and_task_state
+#notify_on_any_change=False
+#instance_usage_audit=False
+#instance_usage_audit_period=hour
+
+rpc_backend = nova.rpc.impl_kombu
+#rabbit_host = 10.21.176.10
+#rabbit_port = 5672
+rabbit_userid = {{rabbit_userid}}
+rabbit_password = {{rabbit_password}}
+rabbit_virtual_host = {{rabbit_virtual_host}}
+rabbit_hosts = {{rabbit_hosts}}
+
+amqp_durable_queues = {{rabbit_durable}}
+
+
+glance_host = {{glance_host}}
+image_service = nova.image.glance.GlanceImageService
+glance_api_servers = {{glance_api_servers}}
+
+metadata_manager=nova.api.manager.MetadataManager
+service_neutron_metadata_proxy=True
+neutron_metadata_proxy_shared_secret={{neutron_metadata_proxy_shared_secret}}
+
+network_api_class=nova.network.neutronv2.api.API
+
+neutron_admin_username={{neutron_admin_username}}
+neutron_admin_password={{neutron_admin_password}}
+neutron_admin_auth_url={{auth_uri}}
+neutron_auth_strategy=keystone
+neutron_auth_protocol = {{auth_protocol}}
+neutron_admin_tenant_name=service
+neutron_url={{neutron_url}}
+neutron_region_name={{neutron_region_name}}
+#libvirt_vif_driver=nova.virt.libvirt.vif.LibvirtHybridOVSBridgeDriver
+
+quota_instances = 15
+quota_cores = -1
+quota_driver = nova.quota.DbQuotaDriver
+quota_ram = -1
+quota_gigabytes = -1
+
+vif_plugging_is_fatal={{vif_plugging_is_fatal}}
+vif_plugging_timeout={{vif_plugging_timeout}}
+firewall_driver =  nova.virt.firewall.NoopFirewallDriver
+security_group_api = neutron
+
+# configuration options for scheduling
+reserved_host_memory_mb={{reserved_host_memory_mb}}
+vcpu_pin_set={{vcpu_pin_set}}
+
+cpu_allocation_ratio=10
+disk_allocation_ratio=1.0
+ram_allocation_ratio=3
+scheduler_available_filters=nova.scheduler.filters.all_filters
+scheduler_default_filters=RetryFilter,AggregateInstanceExtraSpecsFilter,AvailabilityZoneFilter,CoreFilter,DiskFilter,ComputeFilter,ImagePropertiesFilter
+# i removed the RamFilter so i can overcommit like crazy
+#scheduler_default_filters=RetryFilter,AggregateInstanceExtraSpecsFilter,AvailabilityZoneFilter,RamFilter,CoreFilter,DiskFilter,ComputeFilter,ImagePropertiesFilter
+
+running_deleted_instance_action=reap
+resume_guests_state_on_host_boot=True
+
+#osapi_compute_listen={{my_ip}}
+metadata_listen={{my_ip}}
+
+osapi_compute_workers=2
+workers=2
+metadata_workers=2
+
+live_migration_flag=VIR_MIGRATE_UNDEFINE_SOURCE,VIR_MIGRATE_PEER2PEER,VIR_MIGRATE_LIVE
+live_migration_bandwidth=100
+
+
+[conductor]
+use_local={{conductor}}
+
+
+[database]
+connection = mysql://{{nova_sql_user}}:{{nova_sql_pass}}@{{sql_master}}:{{sql_master_port}}/{{nova_sql_db}}
+slave_connection = mysql://{{nova_sql_user}}:{{nova_sql_pass}}@{{sql_slave}}:{{sql_slave_port}}/{{nova_sql_db}}
+
+#[upgrade_levels]
+#compute=icehouse-compat
+
+[libvirt]
+vif_driver=nova.virt.libvirt.vif.LibvirtGenericVIFDriver
+use_virtio_for_bridges=true
+#cpu_mode=custom
+#cpu_model=kvm64
+inject_partition=-2
+inject_key=false
+
+
+[keystone_authtoken]
+#signing_dir = /var/cache/nova
+##cafile =
+
+auth_host = {{auth_host}} 
+auth_port = {{auth_port}}
+auth_protocol = {{auth_protocol}} 
+admin_tenant_name = {{admin_tenant_name}} 
+admin_user = {{admin_user}} 
+admin_password = {{admin_password}} 
+# signing_dir is configurable, but the default behavior of the authtoken
+# middleware should be sufficient.  It will create a temporary directory
+# in the home directory for the user the nova process is running as.
+#signing_dir = /var/lib/nova/keystone-signing
+# Workaround for https://bugs.launchpad.net/nova/+bug/1154809
+auth_version = v2.0
+#auth_protocol = {{auth_protocol}}
+#auth_port = {{auth_port}}
+#auth_host = {{auth_host}}
+#auth_uri = {{auth_uri}}
+#auth_strategy = keystone
+#auth_protocol = {{auth_protocol}}
+#admin_tenant_name = {{admin_tenant_name}}
+#admin_user = {{admin_user}}
+###admin_password = {{admin_password}}
+#identity_uri = {{auth_uri}}

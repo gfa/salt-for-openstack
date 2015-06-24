@@ -1,0 +1,100 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 7 (0x7)
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=AR, ST=BA, L=NOWHERE, O=zumbi, OU=zumbi.lap, CN=zumbi CA/name=EasyRSA/emailAddress=root@zumbi.com.ar
+        Validity
+            Not Before: Jan 11 13:56:55 2015 GMT
+            Not After : Jan  8 13:56:55 2025 GMT
+        Subject: C=AR, ST=BA, L=NOWHERE, O=zumbi, OU=zumbi.lap, CN=controller.zumbi.lap/name=EasyRSA/emailAddress=root@zumbi.com.ar
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:ab:c8:96:d3:fd:d1:5b:13:03:e9:67:2e:2f:02:
+                    8f:61:69:50:b0:5f:f0:d1:c3:04:b1:6a:fa:88:19:
+                    29:7a:2e:6e:a0:91:b8:d1:3a:0f:6c:8a:6a:bf:a8:
+                    35:8a:0f:e6:2c:a7:27:fc:03:e3:8d:07:07:e7:5f:
+                    f8:75:58:7e:be:ce:86:b9:6b:a3:b1:db:1e:a1:df:
+                    3a:c6:dd:60:50:e7:34:ad:a4:47:ad:ae:ca:ff:6c:
+                    a6:c2:4e:bc:b0:2e:85:96:29:0a:03:9f:89:b2:45:
+                    83:42:68:68:a3:ae:b5:55:ab:2f:9d:2e:cf:23:fb:
+                    01:5f:d3:a3:32:da:a6:86:d2:c4:d9:fd:8b:e7:43:
+                    39:a6:51:6c:4b:d9:6b:10:9c:b4:e6:87:ae:f4:19:
+                    59:a8:f1:06:27:0c:26:75:80:f5:af:86:ed:fe:7a:
+                    96:61:37:43:2e:b0:1b:fc:9e:e3:8d:49:0e:cd:4c:
+                    5c:bf:60:a1:94:e6:24:d8:ff:66:f9:4b:cc:9e:65:
+                    ad:dc:b1:de:e2:ec:3d:a5:8c:18:5c:78:9e:f8:85:
+                    30:77:36:19:e6:b6:80:87:0e:22:a6:46:d6:31:07:
+                    be:3f:9b:05:da:73:16:c5:33:dd:ea:46:c5:02:ff:
+                    54:15:10:74:9b:6b:67:0f:90:87:b8:f9:fb:bd:c0:
+                    26:6f
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Cert Type: 
+                SSL Server
+            Netscape Comment: 
+                Easy-RSA Generated Server Certificate
+            X509v3 Subject Key Identifier: 
+                F7:7E:78:C5:28:D1:4C:EC:39:6D:9A:8C:99:F8:6A:00:5F:22:9D:CC
+            X509v3 Authority Key Identifier: 
+                keyid:1E:D3:5B:81:89:E9:19:3C:55:E1:DF:38:3C:83:84:39:F6:DB:EB:E2
+                DirName:/C=AR/ST=BA/L=NOWHERE/O=zumbi/OU=zumbi.lap/CN=zumbi CA/name=EasyRSA/emailAddress=root@zumbi.com.ar
+                serial:81:AA:E8:40:A0:72:EC:7E
+
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication
+            X509v3 Key Usage: 
+                Digital Signature, Key Encipherment
+            X509v3 Subject Alternative Name: 
+                DNS:controller.zumbi.lap
+    Signature Algorithm: sha256WithRSAEncryption
+         67:dc:0c:b7:01:81:25:28:e7:f3:ca:8d:52:90:c5:1b:e2:61:
+         62:78:c9:d1:3a:aa:72:40:f0:9e:5f:ef:dd:17:37:ac:1b:68:
+         7b:c9:c7:d9:76:c1:a8:ba:44:24:c7:7d:00:f9:73:8f:09:7d:
+         ac:d6:77:d7:10:40:8a:ea:52:3c:47:75:52:ee:08:bb:bd:dc:
+         a5:f1:07:42:d7:bd:7f:e1:78:33:db:5d:8b:73:ac:41:f4:e2:
+         51:2b:78:11:5a:40:2a:a7:e7:14:ec:4e:57:90:f6:5d:32:5d:
+         24:a5:f6:5e:d3:b1:f4:82:5e:f4:f4:ec:d0:eb:24:d8:8a:d8:
+         eb:29:3b:09:e9:9f:bb:af:b3:0c:58:11:91:bc:2b:f6:46:e0:
+         dd:ff:7a:10:2d:54:e1:bc:39:11:77:1d:30:9e:90:81:64:73:
+         04:68:5a:68:4d:8b:d8:73:8e:cc:32:b9:e0:21:a7:8a:dd:73:
+         8f:f9:9c:1f:28:df:eb:4e:87:4f:9f:8d:12:a8:10:48:6b:8b:
+         71:92:a1:fb:40:85:14:5d:80:8c:5b:2e:1b:8d:8a:02:0b:c1:
+         16:89:42:ea:6f:1e:b6:39:86:25:4a:1d:ea:48:3a:c2:2b:dc:
+         2c:54:7e:d8:25:5d:0e:3a:33:05:8a:56:76:da:7a:be:79:e6:
+         4f:54:58:3d
+-----BEGIN CERTIFICATE-----
+MIIFQjCCBCqgAwIBAgIBBzANBgkqhkiG9w0BAQsFADCBlzELMAkGA1UEBhMCQVIx
+CzAJBgNVBAgTAkJBMRAwDgYDVQQHEwdOT1dIRVJFMQ4wDAYDVQQKEwV6dW1iaTES
+MBAGA1UECxMJenVtYmkubGFwMREwDwYDVQQDEwh6dW1iaSBDQTEQMA4GA1UEKRMH
+RWFzeVJTQTEgMB4GCSqGSIb3DQEJARYRcm9vdEB6dW1iaS5jb20uYXIwHhcNMTUw
+MTExMTM1NjU1WhcNMjUwMTA4MTM1NjU1WjCBozELMAkGA1UEBhMCQVIxCzAJBgNV
+BAgTAkJBMRAwDgYDVQQHEwdOT1dIRVJFMQ4wDAYDVQQKEwV6dW1iaTESMBAGA1UE
+CxMJenVtYmkubGFwMR0wGwYDVQQDExRjb250cm9sbGVyLnp1bWJpLmxhcDEQMA4G
+A1UEKRMHRWFzeVJTQTEgMB4GCSqGSIb3DQEJARYRcm9vdEB6dW1iaS5jb20uYXIw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCryJbT/dFbEwPpZy4vAo9h
+aVCwX/DRwwSxavqIGSl6Lm6gkbjROg9simq/qDWKD+Yspyf8A+ONBwfnX/h1WH6+
+zoa5a6Ox2x6h3zrG3WBQ5zStpEetrsr/bKbCTrywLoWWKQoDn4myRYNCaGijrrVV
+qy+dLs8j+wFf06My2qaG0sTZ/YvnQzmmUWxL2WsQnLTmh670GVmo8QYnDCZ1gPWv
+hu3+epZhN0MusBv8nuONSQ7NTFy/YKGU5iTY/2b5S8yeZa3csd7i7D2ljBhceJ74
+hTB3NhnmtoCHDiKmRtYxB74/mwXacxbFM93qRsUC/1QVEHSba2cPkIe4+fu9wCZv
+AgMBAAGjggGJMIIBhTAJBgNVHRMEAjAAMBEGCWCGSAGG+EIBAQQEAwIGQDA0Bglg
+hkgBhvhCAQ0EJxYlRWFzeS1SU0EgR2VuZXJhdGVkIFNlcnZlciBDZXJ0aWZpY2F0
+ZTAdBgNVHQ4EFgQU9354xSjRTOw5bZqMmfhqAF8incwwgcwGA1UdIwSBxDCBwYAU
+HtNbgYnpGTxV4d84PIOEOfbb6+KhgZ2kgZowgZcxCzAJBgNVBAYTAkFSMQswCQYD
+VQQIEwJCQTEQMA4GA1UEBxMHTk9XSEVSRTEOMAwGA1UEChMFenVtYmkxEjAQBgNV
+BAsTCXp1bWJpLmxhcDERMA8GA1UEAxMIenVtYmkgQ0ExEDAOBgNVBCkTB0Vhc3lS
+U0ExIDAeBgkqhkiG9w0BCQEWEXJvb3RAenVtYmkuY29tLmFyggkAgaroQKBy7H4w
+EwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgWgMB8GA1UdEQQYMBaCFGNv
+bnRyb2xsZXIuenVtYmkubGFwMA0GCSqGSIb3DQEBCwUAA4IBAQBn3Ay3AYElKOfz
+yo1SkMUb4mFieMnROqpyQPCeX+/dFzesG2h7ycfZdsGoukQkx30A+XOPCX2s1nfX
+EECK6lI8R3VS7gi7vdyl8QdC171/4Xgz212Lc6xB9OJRK3gRWkAqp+cU7E5XkPZd
+Ml0kpfZe07H0gl709OzQ6yTYitjrKTsJ6Z+7r7MMWBGRvCv2RuDd/3oQLVThvDkR
+dx0wnpCBZHMEaFpoTYvYc47MMrngIaeK3XOP+ZwfKN/rTodPn40SqBBIa4txkqH7
+QIUUXYCMWy4bjYoCC8EWiULqbx62OYYlSh3qSDrCK9wsVH7YJV0OOjMFilZ22nq+
+eeZPVFg9
+-----END CERTIFICATE-----

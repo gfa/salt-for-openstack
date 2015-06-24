@@ -1,0 +1,4 @@
+// 2.0.0-2 breaks python2
+Package: python-pysaml2
+Pin: version 2.4.0-1
+Pin-Priority: 1100
