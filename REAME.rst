@@ -2,10 +2,10 @@ Salt States for OpenStack
 ========================
 
 
-this very simple states can configure OpenStack using salt, they can configure keystone, glance, nova and neutron.
+This very simple states can configure OpenStack using salt, they can configure keystone, glance, nova and neutron.
 tested on ubuntu and debian, icehouse, juno and kilo releases.
 
-i may add another states later, as i use this repo to drive my testing, i rebase my production from this repo.
+I may add another states later, as i use this repo to drive my testing, i rebase my production from this repo.
 
 Directories
 -----
