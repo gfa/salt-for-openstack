@@ -1,0 +1,2 @@
+- I plan to split the big monolith roles (stored as node_type grains) to smaller roles like mysql-server, rabbitmq-server, nova-api, neutron-api, etc.
+- use https://github.com/fraunhoferfokus/openstack-formula to create tenant, users, networks, etc. instead of ugly bash scripts
