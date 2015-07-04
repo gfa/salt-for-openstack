@@ -5,7 +5,7 @@ Salt States for OpenStack
 This very simple states can configure OpenStack using salt, they can configure keystone, glance, nova and neutron.
 tested on ubuntu and debian, icehouse, juno and kilo releases.
 
-I may add another states later (when i need them), as I use this repo to drive my testing, my production repo gets frequent merges from this repo.
+I may add another states later when I need them as I use this repo to drive my testing, my production repo gets frequent merges from this repo.
 
 Directories
 -----
@@ -39,4 +39,5 @@ I use simple state files where pkgs are installed, config files are generated an
 
 - There are keys in the repo, I plan to move them to pillar then to a private location, but as I don't use this directly on production it may take a while.
 - Same with pillar values, I don't consider them private.
-
+- Many state files call pillar to get the values and them pass it to template config files, that's an extra round trip. When I first did it I didn't know (or wasn't it possible) for a template call a pillar by itself.
+New states i've added call the pillar from the template files, but I'm too lazy to modify the old ones.
