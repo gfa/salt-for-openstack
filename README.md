@@ -41,3 +41,4 @@ I use simple state files where pkgs are installed, config files are generated an
 - Same with pillar values, I don't consider them private.
 - Many state files call pillar to get the values and them pass it to template config files, that's an extra round trip. When I first did it I didn't know (or wasn't it possible) for a template call a pillar by itself.
 New states i've added call the pillar from the template files, but I'm too lazy to modify the old ones.
+- think of 'node_type' grain as *role*
